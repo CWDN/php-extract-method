@@ -1,0 +1,19 @@
+{
+  "name": "php-extract-method",
+  "main": "./lib/php-extract-method",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "php-extract-method:toggle"
+  },
+  "repository": "https://github.com/atom/php-extract-method",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.3",
+    "sub-atom": "~1.1.0"
+  }
+}
