@@ -1,11 +1,13 @@
 {
   "name": "php-extract-method",
   "main": "./lib/php-extract-method-view",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Atom package for creating methods from a selection.",
-  "keywords": ["php", "extract"],
-  "activationCommands": {
-  },
+  "keywords": [
+    "php",
+    "extract"
+  ],
+  "activationCommands": {},
   "repository": "https://github.com/CWDN/php-extract-method",
   "license": "MIT",
   "engines": {
