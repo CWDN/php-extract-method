@@ -1,11 +1,10 @@
 {
   "name": "php-extract-method",
-  "main": "./lib/php-extract-method",
+  "main": "./lib/php-extract-method-view",
   "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [],
+  "description": "Atom package for creating methods from a selection.",
+  "keywords": ["php", "extract"],
   "activationCommands": {
-    "atom-workspace": "php-extract-method:toggle"
   },
   "repository": "https://github.com/atom/php-extract-method",
   "license": "MIT",
