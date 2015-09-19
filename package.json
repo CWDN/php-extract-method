@@ -6,7 +6,7 @@
   "keywords": ["php", "extract"],
   "activationCommands": {
   },
-  "repository": "https://github.com/atom/php-extract-method",
+  "repository": "https://github.com/CWDN/php-extract-method",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
