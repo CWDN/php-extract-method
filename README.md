@@ -1,5 +1,5 @@
 # php-extract-method package
 
-A short description of your package.
+Atom package for creating methods from a selection. 
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![A screenshot of your package](https://cloud.githubusercontent.com/assets/1649191/9976335/ef94a832-5ed8-11e5-8c32-0950397d8311.gif)
