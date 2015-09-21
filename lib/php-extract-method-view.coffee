@@ -122,12 +122,16 @@ module.exports =
             @hide()
 
         buildMethod: (accessModifier, methodName, methodBody) ->
+            if @activeEditor == undefined
+                return
             parameters = @buildParameters methodBody
             methodBody = "#{accessModifier} function #{methodName}(#{parameters.join ', '})\n{\n#{@activeEditor.getTabText()}#{methodBody}\n}"
             docs = @buildDocumentation methodName, parameters
             return docs + methodBody
 
         buildMethodWithTabs: (accessModifier, methodName, methodBody) ->
+            if @activeEditor == undefined
+                return
             parameters = @buildParameters methodBody
             methodBody = "#{@activeEditor.getTabText()}#{accessModifier} function #{methodName}(#{parameters.join ', '})\n#{@activeEditor.getTabText()}{\n#{@activeEditor.getTabText()}#{@activeEditor.getTabText()}#{methodBody}\n#{@activeEditor.getTabText()}}"
             docs = @buildDocumentation methodName, parameters, true
@@ -140,6 +144,8 @@ module.exports =
             return methodCall
 
         buildParameters: (methodBody) ->
+            if methodBody == undefined
+                return []
             lines = methodBody.split('\n')
             declaredVariables = ['$this']
             parameters = []
