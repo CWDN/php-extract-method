@@ -39,8 +39,13 @@ module.exports =
         initialize: ->
             @subscriptions = new SubAtom
             @subscriptions.add atom.commands.add 'atom-text-editor', 'php-extract-method:extract', => @show()
-            @subscriptions.add atom.commands.add @methodNameEditor.getModel(), 'core:confirm', => @extractMethod()
-            @subscriptions.add atom.commands.add @methodNameEditor.getModel(), 'core:cancel', => @hide()
+            @subscriptions.add atom.commands.add @element,
+                'core:confirm': (event) =>
+                    @extractMethod()
+                    event.stopPropagation()
+                'core:cancel': (event) =>
+                    @hide()
+                    event.stopPropagation()
             @subscriptions.add atom.commands.add @extractButton[0], 'click', => @extractMethod()
             @subscriptions.add atom.commands.add @cancelButton[0], 'click', => @hide()
             @generateDocs = false
