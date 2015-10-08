@@ -3,6 +3,12 @@ SubAtom = require('sub-atom')
 
 module.exports =
     class PhpExtractMethodView extends View
+        @config:
+            'show-buttons':
+                title: 'Show Buttons'
+                description: 'Whether to show the cancel and extract buttons'
+                type: 'boolean'
+                default: 'true'
         @activate: ->
             view = new PhpExtractMethodView
         @deactivate: ->
@@ -32,7 +38,7 @@ module.exports =
                                     @label class: 'control-label', =>
                                         @div class: 'setting-title', 'Preview'
                                         @pre class: 'preview-area', outlet: 'previewArea'
-                @div class: 'block pull-right', =>
+                @div outlet: 'buttonGroup', class: 'block pull-right', =>
                     @button outlet: 'extractButton', class: 'inline-block btn btn-success', 'Extract method'
                     @button outlet: 'cancelButton', class: 'inline-block btn', 'Cancel'
 
@@ -48,6 +54,12 @@ module.exports =
                     event.stopPropagation()
             @subscriptions.add atom.commands.add @extractButton[0], 'click', => @extractMethod()
             @subscriptions.add atom.commands.add @cancelButton[0], 'click', => @hide()
+            @subscriptions.add atom.config.observe 'php-extract-method.show-buttons', (show) =>
+                if show
+                    $(@buttonGroup[0]).show()
+                else
+                    $(@buttonGroup[0]).hide()
+
             @generateDocs = false
 
             @methodNameEditor.getModel().onDidChange () =>
