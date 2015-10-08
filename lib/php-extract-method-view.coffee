@@ -12,7 +12,7 @@ module.exports =
                 @div outlet: 'methodNameForm', =>
                     @subview 'methodNameEditor', new TextEditorView(mini:true, placeholderText: 'Enter a method name')
                     @div class: 'settings-view', =>
-                        @div class: 'body', =>
+                        @div class: 'section-body', =>
                             @div class: 'control-group', =>
                                 @div class: 'controls', =>
                                     @label class: 'control-label', =>
@@ -32,9 +32,8 @@ module.exports =
                                     @label class: 'control-label', =>
                                         @div class: 'setting-title', 'Preview'
                                         @pre class: 'preview-area', outlet: 'previewArea'
-                @div class: 'pull-right', =>
+                @div class: 'block pull-right', =>
                     @button outlet: 'extractButton', class: 'inline-block btn btn-success', 'Extract method'
-                @div class: 'pull-right', =>
                     @button outlet: 'cancelButton', class: 'inline-block btn', 'Cancel'
 
         initialize: ->
