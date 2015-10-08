@@ -92,9 +92,11 @@ module.exports =
             @strippedHighlighted = @highlighted.replace(find, "#{@activeEditor.getTabText()}")
             @methodBody = @buildMethod($(@accessMethodsInput).val(), @methodNameEditor.getText(), @strippedHighlighted)
             $(@previewArea).text(@methodBody)
+
         hide: ->
             @panel.hide()
             @methodNameEditor.setText('')
+            atom.views.getView(@activeEditor).focus();
 
         extractMethod: ->
             @activeEditor.insertText(@buildMethodCall(@methodNameEditor.getText(), @highlighted))
