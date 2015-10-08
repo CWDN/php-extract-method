@@ -5,41 +5,19 @@
 @import "ui-variables";
 
 .php-extract-method {
-    .panel-footer {
-        display: table;
+    .section-body, .form-control, .control-label, .control-group, .controls {
         width: 100%;
     }
-    .form-control, .control-label, .control-group, .controls {
-        width: 100%;
+    .preview-area {
+        max-height: 400px;
     }
-
-    .settings-view {
-        display:block;
-
-        .controls {
-            margin-top: 5px;
-        }
-
-        input[type="checkbox"] {
-            margin: 0;
-        }
-
-        .setting-title {
-            display: inline-block;
-            margin-left: 5px;
-            cursor: pointer;
-        }
+    // Should change to reflect the padding of the theme instead of hardcoded.
+    .block {
+        margin-top: 4px;
     }
-
-    .preview-area-container {
-        margin-top: 10px;
-
-        .preview-area {
-            max-height: 600px;
+    .pull-right {
+        .inline-block {
+            margin-left: 9px;
         }
-    }
-
-    .btn-cancel {
-        margin-right: 13px;
     }
 }

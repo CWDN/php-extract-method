@@ -9,33 +9,32 @@ module.exports =
             @view.detach()
         @content: ->
             @div class: 'php-extract-method', =>
-                @div class: "panel", =>
-                    @div class: "panel-body padded", =>
-                        @div outlet: 'methodNameForm', =>
-                            @subview 'methodNameEditor', new TextEditorView(mini:true, placeholderText: 'Enter a method name')
-                            @div class: "settings-view", =>
-                                @div class: "control-group", =>
-                                    @div class: "controls", =>
-                                        @label class: "control-label", =>
-                                            @div class: "setting-title", "Access Modifier"
-                                            @select outlet: 'accessMethodsInput', class: "form-control", =>
-                                                @option value: "public", "Public"
-                                                @option value: "protected", "Protected"
-                                                @option value: "private", "Private"
-                                @div class: "control-group", =>
-                                    @div class: "controls", =>
+                @div outlet: 'methodNameForm', =>
+                    @subview 'methodNameEditor', new TextEditorView(mini:true, placeholderText: 'Enter a method name')
+                    @div class: 'settings-view', =>
+                        @div class: 'section-body', =>
+                            @div class: 'control-group', =>
+                                @div class: 'controls', =>
+                                    @label class: 'control-label', =>
+                                        @div class: 'setting-title', 'Access Modifier'
+                                        @select outlet: 'accessMethodsInput', class: 'form-control', =>
+                                            @option value: 'public', 'Public'
+                                            @option value: 'protected', 'Protected'
+                                            @option value: 'private', 'Private'
+                            @div class: 'control-group', =>
+                                @div class: 'controls', =>
+                                    @div class: 'checkbox', =>
                                         @label =>
-                                            @input outlet: 'generateDocInput', type: "checkbox"
-                                            @div class: "setting-title", "Generate documentation"
-                                @div class: "preview-area-container", =>
-                                    @label class: "control-label", =>
-                                        @div class: "setting-title", "Preview"
-                                        @pre outlet: 'previewArea', class: "preview-area"
-                    @div class: "panel-footer padded", =>
-                        @div class: 'pull-right', =>
-                            @button outlet: 'extractButton', class: 'btn btn-success', "Extract method"
-                        @div class: 'pull-right', =>
-                            @button outlet: 'cancelButton', class: 'btn btn-cancel', "Cancel"
+                                            @input outlet: 'generateDocInput', type: 'checkbox'
+                                            @div class: 'setting-title', 'Generate documentation'
+                            @div class: 'control-group', =>
+                                @div class: 'controls', =>
+                                    @label class: 'control-label', =>
+                                        @div class: 'setting-title', 'Preview'
+                                        @pre class: 'preview-area', outlet: 'previewArea'
+                @div class: 'block pull-right', =>
+                    @button outlet: 'extractButton', class: 'inline-block btn btn-success', 'Extract method'
+                    @button outlet: 'cancelButton', class: 'inline-block btn', 'Cancel'
 
         initialize: ->
             @subscriptions = new SubAtom
