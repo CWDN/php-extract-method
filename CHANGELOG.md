@@ -1,4 +1,4 @@
-## 0.1.2 - More bugfixes and enhancements
+## 0.2.0 - More bugfixes and enhancements
 * Markup refactor as done by @Traverse
 * Fixed not being able to confirm and cancel from the text editor
 * Added a config option to hide and show the extract and cancel buttons
