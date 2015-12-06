@@ -1,3 +1,9 @@
+## 0.2.1 - Refactor and bugfixes
+* Refactored the parser so it's now in a separate class.
+* Small fixes to variables being declared by lists() and in for loops.
+* Fixed variables being declared in function () and still being added to parameters.
+* Added one space between the passed in parameters.
+
 ## 0.2.0 - More bugfixes and enhancements
 * Markup refactor as done by @Traverse
 * Fixed not being able to confirm and cancel from the text editor
