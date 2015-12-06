@@ -2,21 +2,7 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle php-extract-method'
-      'command': 'php-extract-method:toggle'
+      'label': 'Extract Method'
+      'command': 'php-extract-method:extract'
     }
   ]
-'menu': [
-  {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'php-extract-method'
-      'submenu': [
-        {
-          'label': 'Toggle'
-          'command': 'php-extract-method:toggle'
-        }
-      ]
-    ]
-  }
-]
