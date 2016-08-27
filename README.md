@@ -1,3 +1,6 @@
+# No longer maintained
+For an improved version of this look at https://github.com/Gert-dev/php-integrator-refactoring
+
 # php-extract-method package
 
 Atom package for creating methods from a selection. 
